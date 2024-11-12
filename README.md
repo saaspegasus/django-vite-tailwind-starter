@@ -32,3 +32,23 @@ From there, you can run commands normally:
 ```bash
 python manage.py runserver
 ```
+
+## Front end
+
+The front end files can be found in the `assets` folder.
+The front end is built with [Vite](https://vitejs.dev/) and [Tailwind CSS](https://tailwindcss.com/).
+
+To build the front end, first install the dependencies:
+
+```bash
+cd assets
+npm install
+```
+
+Then run:
+
+```bash
+npm run watch
+```
+
+This will build the css files and copy them into your Django static files directory at `/static/dist/`.

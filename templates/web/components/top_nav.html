@@ -1,5 +1,11 @@
 <header class="py-4 shadow-sm">
-  <nav>
-    <a href="{% url 'web:home' %}" class="text-blue-500">Home</a>
+  <nav class="flex justify-between">
+    <div>
+      <a href="{% url 'web:home' %}" class="text-blue-500 hover:underline">Home</a>
+    </div>
+    <div class="flex gap-4">
+      <a href="{% url 'account_login' %}" class="text-blue-500 hover:underline">Login</a>
+      <a href="{% url 'account_signup' %}" class="text-blue-500 hover:underline">Signup</a>
+    </div>
   </nav>
 </header>

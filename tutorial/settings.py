@@ -37,6 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # third party apps
+    'allauth',
+    'allauth.account',
+    # project apps
     'apps.users.apps.UserConfig',
 ]
 
@@ -48,6 +52,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "allauth.account.middleware.AccountMiddleware",
 ]
 
 ROOT_URLCONF = 'tutorial.urls'
@@ -82,8 +87,13 @@ DATABASES = {
     }
 }
 
+# Auth and Login
 
+# Django recommends overriding the user model even if you don"t think you need to because it makes
+# future changes easier.
 AUTH_USER_MODEL = "users.CustomUser"
+LOGIN_URL = "account_login"
+LOGIN_REDIRECT_URL = "/"
 
 # Password validation
 # https://docs.djangoproject.com/en/stable/ref/settings/#auth-password-validators
@@ -103,6 +113,13 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+
+AUTHENTICATION_BACKENDS = (
+    # Needed to login by username in Django admin, regardless of `allauth`
+    "django.contrib.auth.backends.ModelBackend",
+    # `allauth` specific authentication methods, such as login by e-mail
+    "allauth.account.auth_backends.AuthenticationBackend",
+)
 
 # Internationalization
 # https://docs.djangoproject.com/en/stable/topics/i18n/

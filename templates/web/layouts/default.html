@@ -1,6 +1,7 @@
 {% extends 'web/base.html' %}
 {% block body_wrapper %}
-<div class="container mx-auto flex flex-col min-h-screen justify-between">
+<div class="mx-4">
+<div class="container mx-auto flex flex-col min-h-screen justify-between ">
 {% block top_nav %}
   {% include 'web/components/top_nav.html' %}
 {% endblock %}
@@ -8,5 +9,6 @@
 {% block footer %}
   {% include 'web/components/footer.html' %}
 {% endblock footer %}
+</div>
 </div>
 {% endblock body_wrapper %}

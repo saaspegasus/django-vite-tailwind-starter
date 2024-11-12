@@ -1,0 +1,35 @@
+# Python/Django
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.env
+db.sqlite3
+media/
+
+# Frontend
+assets/node_modules/
+assets/.vite/
+static/dist/
+**/dist/
+
+# Editor/IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build/Debug
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.coverage
+coverage/

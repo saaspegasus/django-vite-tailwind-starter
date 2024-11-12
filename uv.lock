@@ -25,6 +25,16 @@ wheels = [
 ]
 
 [[package]]
+name = "django-allauth"
+version = "65.2.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "asgiref" },
+    { name = "django" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/2c/df/1db5a3d7c87df36c4258ad58502dc12971df28a3b9c1e0be2e41007a7277/django_allauth-65.2.0.tar.gz", hash = "sha256:0a3d7baf7beefd6fe8027316302c26ece7433cf4331a3b245d15fc9a7be68b6f", size = 1544072 }
+
+[[package]]
 name = "sqlparse"
 version = "0.5.1"
 source = { registry = "https://pypi.org/simple" }
@@ -39,10 +49,14 @@ version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "django" },
+    { name = "django-allauth" },
 ]
 
 [package.metadata]
-requires-dist = [{ name = "django", specifier = ">=5.1.2" }]
+requires-dist = [
+    { name = "django", specifier = ">=5.1.2" },
+    { name = "django-allauth", specifier = ">=65.2.0" },
+]
 
 [[package]]
 name = "tzdata"

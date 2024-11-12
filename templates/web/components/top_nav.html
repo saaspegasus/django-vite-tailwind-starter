@@ -4,8 +4,13 @@
       <a href="{% url 'web:home' %}" class="text-blue-500 hover:underline">Home</a>
     </div>
     <div class="flex gap-4">
-      <a href="{% url 'account_login' %}" class="text-blue-500 hover:underline">Login</a>
-      <a href="{% url 'account_signup' %}" class="text-blue-500 hover:underline">Signup</a>
+      {% if user.is_authenticated %}
+        <span class="text-gray-500">{{ user.username }}</span>
+        <a href="{% url 'account_logout' %}" class="text-blue-500 hover:underline">Logout</a>
+      {% else %}
+        <a href="{% url 'account_login' %}" class="text-blue-500 hover:underline">Login</a>
+        <a href="{% url 'account_signup' %}" class="text-blue-500 hover:underline">Signup</a>
+      {% endif %}
     </div>
   </nav>
 </header>

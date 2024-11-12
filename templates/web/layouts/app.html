@@ -1,0 +1,14 @@
+{% extends "web/layouts/default.html" %}
+{% block body %}
+<div class="flex flex-col md:flex-row md:h-[calc(100vh-12rem)] gap-4 my-6">
+  <div class="w-64 border-b md:border-b-0 md:border-r border-gray-100 pb-4 md:pb-0">
+    {% block app_sidebar %}
+    {% include 'web/components/app_sidebar.html' %}
+    {% endblock app_sidebar %}
+  </div>
+  <div class="flex-1">
+    {% block app_content %}
+    {% endblock app_content %}
+  </div>
+</div>
+{% endblock body %}

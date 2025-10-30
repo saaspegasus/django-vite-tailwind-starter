@@ -11,6 +11,7 @@ export default defineConfig({
   build: {
     outDir: path.resolve(__dirname, './static'), // Output directory for production build
     emptyOutDir: false, // Preserve the outDir to not clobber Django's other files.
+    manifest: "manifest.json",
     rollupOptions: {
       input: {
         'index': path.resolve(__dirname, './assets/index.js'),

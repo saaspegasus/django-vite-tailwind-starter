@@ -1,7 +1,9 @@
 import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 import path from 'path';
 
 export default defineConfig({
+  plugins: [react()],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './assets/javascript'),
@@ -15,6 +17,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         'index': path.resolve(__dirname, './assets/index.js'),
+        'hello': path.resolve(__dirname, './assets/hello.jsx'),
       },
       output: {
         // Output JS bundles to js/ directory with -bundle suffix

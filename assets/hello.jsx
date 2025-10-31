@@ -1,4 +1,4 @@
 import { createRoot } from 'react-dom/client';
 
 const root = createRoot(document.getElementById('root'));
-root.render(<h1>Hello, react!</h1>);
+root.render(<h1 className="text-center text-3xl text-indigo-200 font-bold">Hello, React!</h1>);

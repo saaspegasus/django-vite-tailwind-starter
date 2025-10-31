@@ -2,3 +2,6 @@ __pycache__
 node_modules
 db.sqlite3
 *~
+
+static/js/
+static/css/

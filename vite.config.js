@@ -5,11 +5,6 @@ import path from 'path';
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, './assets/javascript'),
-    },
-  },
   base: '/static/', // This should match Django's STATIC_URL
   build: {
     outDir: path.resolve(__dirname, './static'), // This should be something in your STATICFILES_DIRS

@@ -5,9 +5,11 @@ import path from 'path';
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: '/static/', // This should match Django's STATIC_URL
+  base: '/static/', // This should match Django's settings.STATIC_URL
   build: {
-    outDir: path.resolve(__dirname, './static'), // This should be something in your STATICFILES_DIRS
+    // Where Vite will save its output files.
+    // This should be something in your settings.STATICFILES_DIRS
+    outDir: path.resolve(__dirname, './static'),
     emptyOutDir: false, // Preserve the outDir to not clobber Django's other files.
     manifest: "manifest.json",
     rollupOptions: {

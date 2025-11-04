@@ -59,7 +59,15 @@ uv run python manage.py migrate
 
 ## Development
 
-For development, you'll need to run **two servers** simultaneously:
+For development, you'll need to run **two servers** simultaneously.
+You can use the `./scripts.dev.sh` file to do this in a single command:
+
+```bash
+./scripts/dev.sh
+```
+
+Alternatively, run the processes separately as follows:
+
 
 ### Terminal 1: Django development server
 

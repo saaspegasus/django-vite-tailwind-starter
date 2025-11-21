@@ -11,7 +11,7 @@ Technologies:
 - **[django-vite](https://github.com/MrBin99/django-vite)** - Integrates Django and Vite, with hot module replacement (HMR) support
 - **[React](https://react.dev/)** (Optional) - UI library with JSX support
 
-This project is the working companion piece to **[Modern JavaScript for Django Developers (Part 3)](https://www.saaspegasus.com/guides/modern-javascript-for-django-developers/integrating-django-vite/)** - a comprehensive guide showing how to set up a modern front-end pipeline in Django.
+This project is the working companion piece to **[Modern JavaScript for Django Developers (Part 3)](https://www.saaspegasus.com/guides/modern-javascript-for-django-developers/integrating-javascript-pipeline-vite/)** - a comprehensive guide showing how to set up a modern front-end pipeline in Django.
 
 It is intentionally *bare*, combining the ouput of `django-admin startproject` with a minimal, functional Vite setup
 to use Tailwind and (optionally) React.
@@ -135,7 +135,7 @@ to use the built static files instead of the Vite dev server.
 
 For a detailed walkthrough of how this all works, including step-by-step setup instructions, read the companion guide:
 
-**[Modern JavaScript for Django Developers - Part 3: Integrating Django and Vite](https://www.saaspegasus.com/guides/modern-javascript-for-django-developers/integrating-django-vite/)**
+**[Modern JavaScript for Django Developers - Part 3: Integrating Django and Vite](https://www.saaspegasus.com/guides/modern-javascript-for-django-developers/integrating-javascript-pipeline-vite/)**
 
 ## License
 

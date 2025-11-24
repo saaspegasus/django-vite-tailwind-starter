@@ -123,7 +123,7 @@ to use the built static files instead of the Vite dev server.
 │   └── manifest.json
 ├── templates/               # Django templates
 │   └── hello_vite.html      # Example template using Vite assets
-├── mysite/                  # Django project settings
+├── project/                 # Django project settings
 │   ├── settings.py
 │   └── urls.py
 ├── vite.config.js           # Vite configuration

@@ -1,0 +1,12 @@
+{% load django_vite %}
+<html>
+  <head>
+    <title>{% block title %}Getting Started with Django and Vite{% endblock %}</title>
+    {% vite_hmr_client %}
+    {% vite_asset 'assets/style.css' %}
+    {% block extra_head %}{% endblock %}
+  </head>
+  <body>
+    {% block content %}{% endblock %}
+  </body>
+</html>

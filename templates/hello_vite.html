@@ -1,13 +1,7 @@
+{% extends "base.html" %}
 {% load django_vite %}
-<html>
-  <head>
-    <title>Getting Started with Django and Vite</title>
-    {% vite_hmr_client %}
-    {% vite_asset 'assets/style.css' %}
-  </head>
-  <body class="bg-emerald-700 my-4">
-    <div id="root"></div>
-    <p class="text-center text-white">(and Tailwind)</p>
-    {% vite_asset 'assets/hello.jsx' %}
-  </body>
-</html>
+{% block content %}
+  <div id="root" class="container mx-auto mt-4"></div>
+  <p class="text-center text-emerald-700">(and Tailwind)</p>
+  {% vite_asset 'assets/hello.jsx' %}
+{% endblock %}

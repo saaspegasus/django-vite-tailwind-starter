@@ -9,23 +9,24 @@ Technologies:
 - **[Vite](https://vite.dev/)** - Front end build tool
 - **[Tailwind CSS](https://tailwindcss.com/)** - CSS framework
 - **[django-vite](https://github.com/MrBin99/django-vite)** - Integrates Django and Vite, with hot module replacement (HMR) support
-- **[React](https://react.dev/)** (Optional) - UI library with JSX support
+- **[React](https://react.dev/)** (Optional) - Demonstrating how you can add a UI library and JSX support
 
-This project is the working companion piece to **[Modern JavaScript for Django Developers (Part 3): Adding Vite to Django, so you can use Modern JavaScript, React, and Tailwind CSS](https://www.saaspegasus.com/guides/modern-javascript-for-django-developers/integrating-javascript-pipeline-vite/)** - a detailed guide showing how to set up a modern front-end pipeline in Django.
+This project is the working companion piece to **[Modern JavaScript for Django Developers (Part 3): Adding Vite to Django, so you can use Modern JavaScript, React, and Tailwind CSS](https://www.saaspegasus.com/guides/modern-javascript-for-django-developers/integrating-javascript-pipeline-vite/)** - a detailed guide on how to set up a modern front-end pipeline in Django.
+There is also a [video walkthrough](https://youtu.be/GztJ1h6ZXA0).
 
-It is intentionally *bare*, combining the ouput of `django-admin startproject` with a minimal, functional Vite setup
-to use Tailwind and (optionally) React.
+This repo is intentionally *bare*, combining the ouput of `django-admin startproject` with a minimal,
+functional Vite setup to use Tailwind and (optionally) React with no other clutter.
 You can use it for learning or as a foundation to build off of.
 
-**👉 Looking for a full-featured SaaS Starter Kit for Django? Check out [SaaS Pegasus](https://www.saaspegasus.com/?via=vite-readme).**
+**If you're looking for a full-featured SaaS Starter Kit for Django, check out [SaaS Pegasus](https://www.saaspegasus.com/?via=vite-readme).**
 
 ## Features
 
 - ✅ Vite environment ready to be integrated with Django templates
 - ✅ Tailwind CSS with automatic class pruning
-- ✅ Production-ready build pipeline
 - ✅ Hot Module Replacement (HMR) for instant updates during development
 - ✅ Example demonstrating a React + Tailwind + Django integration (in a [hybrid architecture](https://www.saaspegasus.com/guides/modern-javascript-for-django-developers/client-server-architectures/#enter-the-hybrid-architecture))
+- ✅ Vibe-coded landing page showcasing Tailwind usage.
 
 ## Prerequisites
 
@@ -59,7 +60,7 @@ uv run python manage.py migrate
 
 ## Development
 
-For development, you'll need to run **two servers** simultaneously.
+For development, you'll need to run both Django and Vite simultaneously.
 You can use the `./scripts.dev.sh` file to do this in a single command:
 
 ```bash
@@ -84,14 +85,17 @@ This starts Django at `http://localhost:8000`
 npm run dev
 ```
 
-This starts Vite's dev server, which automatically reloads your JavaScript and CSS changes without refreshing the browser.
+This starts Vite's dev server, which serves your JavaScript and CSS (in dev)
+and watch for changes.
 
 ### View the demo
 
 Once both servers are running, visit:
-- **http://localhost:8000/hello-vite/** - Demo page with React and Tailwind
 
-You can now edit files in `./assets/` and see changes reflected instantly in your browser!
+- **http://localhost:8000/** - Basic landing page showing Tailwind usage
+- **http://localhost:8000/hello-vite/** - Demo page with minimal React + Tailwind app.
+
+You can edit files in `./assets/` and see changes reflected instantly in your browser!
 
 ## Production Build
 

@@ -1,6 +1,150 @@
 {% extends "base.html" %}
+
+{% block title %}Django + Vite + Tailwind CSS Starter{% endblock %}
+
 {% block content %}
-  <div class="container max-w-4xl mx-auto mt-4">
-    <h1 class="text-center text-3xl text-emerald-700 font-bold">Django + Vite + Tailwind CSS Starter</h1>
+  <div class="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
+    <!-- Hero Section -->
+    <div class="container max-w-6xl mx-auto px-4 pt-16 pb-20">
+      <div class="text-center mb-16">
+        <h1 class="text-5xl md:text-6xl font-bold text-slate-900 mb-6">
+          Django + Vite + Tailwind CSS
+        </h1>
+        <p class="text-xl md:text-2xl text-slate-600 mb-8 max-w-3xl mx-auto">
+          A modern Django starter with a full-featured Vite pipeline for JavaScript and CSS
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="https://www.saaspegasus.com/guides/modern-javascript-for-django-developers/integrating-javascript-pipeline-vite/"
+             target="_blank"
+             class="inline-block bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-8 py-3 rounded-lg transition-colors shadow-lg hover:shadow-xl">
+            Read the Guide →
+          </a>
+          <a href="/hello-vite/"
+             class="inline-block bg-white hover:bg-slate-50 text-slate-900 font-semibold px-8 py-3 rounded-lg transition-colors shadow-md hover:shadow-lg border border-slate-200">
+            React "Hello World"
+          </a>
+        </div>
+      </div>
+      <div class="mb-16">
+        <h2 class="text-3xl font-bold text-slate-900 mb-10 text-center">What You Get</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+            <div class="text-emerald-600 text-2xl mb-3">⚡</div>
+            <h3 class="text-lg font-semibold text-slate-900 mb-2">Lightning Fast Development</h3>
+            <p class="text-slate-600">Hot Module Replacement (HMR) for instant updates without page refreshes</p>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+            <div class="text-purple-600 text-2xl mb-3">🎨</div>
+            <h3 class="text-lg font-semibold text-slate-900 mb-2">Tailwind CSS Ready</h3>
+            <p class="text-slate-600">Production-optimized builds with automatic class pruning</p>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+            <div class="text-blue-600 text-2xl mb-3">⚛️</div>
+            <h3 class="text-lg font-semibold text-slate-900 mb-2">React Support</h3>
+            <p class="text-slate-600">Optional React integration with JSX support out of the box</p>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+            <div class="text-orange-600 text-2xl mb-3">📦</div>
+            <h3 class="text-lg font-semibold text-slate-900 mb-2">Production Ready</h3>
+            <p class="text-slate-600">Optimized build pipeline for deployment to any platform</p>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+            <div class="text-sky-600 text-2xl mb-3">🔥</div>
+            <h3 class="text-lg font-semibold text-slate-900 mb-2">Modern JavaScript</h3>
+            <p class="text-slate-600">Use ES modules, imports, and all modern JS features</p>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+            <div class="text-pink-600 text-2xl mb-3">🎯</div>
+            <h3 class="text-lg font-semibold text-slate-900 mb-2">Minimal & Focused</h3>
+            <p class="text-slate-600">Intentionally bare—perfect for learning or building upon</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Guide CTA -->
+      <div class="bg-gradient-to-r from-emerald-500 to-teal-600 rounded-xl shadow-xl p-8 md:p-12 mb-16 text-white">
+        <div class="max-w-3xl mx-auto text-center">
+          <h2 class="text-3xl font-bold mb-4">How It Works</h2>
+          <p class="text-lg text-emerald-50 mb-6">
+            This guide explains the complete set up process and rationale behind the choices made.
+          </p>
+          <a href="https://www.saaspegasus.com/guides/modern-javascript-for-django-developers/"
+             target="_blank"
+             class="inline-block bg-white text-emerald-600 font-semibold px-8 py-3 rounded-lg hover:bg-emerald-50 transition-colors shadow-lg">
+            Read: Modern JavaScript for Django Developers →
+          </a>
+        </div>
+      </div>
+
+      <!-- SaaS Pegasus Upsell -->
+      <div class="bg-white rounded-xl shadow-lg p-8 md:p-10 border-2 border-slate-200">
+        <div class="max-w-3xl mx-auto">
+          <div class="flex items-start gap-4 mb-4">
+            <div class="text-3xl">🚀</div>
+            <div>
+              <h3 class="text-2xl font-bold text-slate-900 mb-3">Building a SaaS Product?</h3>
+              <p class="text-slate-600 mb-4">
+                This starter is great for learning, but if you're building a real application, check out
+                <a href="https://www.saaspegasus.com/?via=vite-readme" target="_blank" class="text-emerald-600 hover:text-emerald-700 font-semibold">SaaS Pegasus</a>
+                —a full-featured Django SaaS boilerplate that includes everything you need:
+              </p>
+              <ul class="text-slate-600 space-y-2 mb-6">
+                <li class="flex items-start">
+                  <span class="text-emerald-600 mr-2">✓</span>
+                  <span>User authentication, teams, and role-based permissions</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-emerald-600 mr-2">✓</span>
+                  <span>Stripe subscriptions and payment processing</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-emerald-600 mr-2">✓</span>
+                  <span>AI features, like agents, chat, images, and code assistance</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-emerald-600 mr-2">✓</span>
+                  <span>Production deployment to various platforms</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-emerald-600 mr-2">✓</span>
+                  <span>And much more</span>
+                </li>
+              </ul>
+              <a href="https://www.saaspegasus.com/?via=vite-readme"
+                 target="_blank"
+                 class="inline-block text-emerald-600 hover:text-emerald-700 font-semibold">
+                Learn more about SaaS Pegasus →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Disclosure -->
+      <div class="max-w-6xl mx-auto px-4 py-8 text-center">
+        <div class="inline-block bg-slate-100 rounded-lg px-6 py-3 border border-slate-200">
+          <p class="text-sm text-slate-600">
+            <span class="font-semibold">Disclosure:</span> This page was quickly vibe-coded by an AI. Which is something you can easily do with a Tailwind pipeline set up! ✨
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="border-t border-slate-200 py-8">
+      <div class="container max-w-6xl mx-auto px-4 text-center text-slate-600">
+        <p>Open source under the MIT License</p>
+        <p class="mt-2">
+          <a href="https://github.com/saaspegasus/django-vite-tailwind-starter" target="_blank" class="text-emerald-600 hover:text-emerald-700">
+            View on GitHub
+          </a>
+        </p>
+      </div>
+    </div>
   </div>
 {% endblock %}

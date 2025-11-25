@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_vite',
     'django_browser_reload',
-    'home',
 ]
 
 MIDDLEWARE = [
